@@ -1,0 +1,91 @@
+<|--                                                                            
+==========Testcase 1==========                                                  
+Error in null - demo2 : non-conformable arrays                                  
+Execution halted                                                                
+                                                                                
+Column space incorrect. Penalty -5.                                             
+Null space incorrect. Penalty -5.                                               
+Solution space incorrect. Penalty -5.                                           
+Test case marks: 0                                                              
+==========Testcase 2==========                                                  
+Error in null - demo2 : non-conformable arrays                                  
+Execution halted                                                                
+                                                                                
+Column space incorrect. Penalty -5.                                             
+Null space incorrect. Penalty -5.                                               
+Solution space incorrect. Penalty -5.                                           
+Test case marks: 0                                                              
+==========Testcase 3==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null space incorrect. Penalty -5.                                               
+Solution Space Correct!                                                         
+Test case marks: 10                                                             
+==========Testcase 4==========       
+Column Space Correct!                                                           
+Null space incorrect. Penalty -5.                                               
+Solution space incorrect. Penalty -5.                                           
+Test case marks: 5                                                              
+==========Testcase 5==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null Space Correct!                                                             
+Solution Space Correct!                                                         
+Test case marks: 15                                                             
+==========Testcase 6==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null Space Correct!                                                             
+Solution Space Correct!                                                         
+Test case marks: 15                                                             
+Total Marks: 45                                                                 
+                                                                                
+--|>         
+
+
+
+<|--                                                                            
+==========Testcase 1==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null space incorrect. Penalty -5.                                               
+Solution space incorrect. Penalty -5.                                           
+Test case marks: 5                                                              
+==========Testcase 2==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null space incorrect. Penalty -5.                                               
+Solution space incorrect. Penalty -5.                                           
+Test case marks: 5                                                              
+==========Testcase 3==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null space incorrect. Penalty -5.                                               
+Solution Space Correct!                                                         
+Test case marks: 10                                                             
+==========Testcase 4==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null space incorrect. Penalty -5.                                               
+Solution space incorrect. Penalty -5.
+Test case marks: 5                                                              
+==========Testcase 5==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null Space Correct!                                                             
+Solution Space Correct!                                                         
+Test case marks: 15                                                             
+==========Testcase 6==========                                                  
+                                                                                
+Column Space Correct!                                                           
+Null Space Correct!                                                             
+Solution Space Correct!                                                         
+Test case marks: 15                                                             
+Total Marks: 55                                                                 
+                                                                                
+--|>  
+
+
+
+
+                                                                   
