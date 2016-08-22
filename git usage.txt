@@ -1,0 +1,66 @@
+<___________________________________________________________________________>
+<--------------------------------------------------------------------------->
+for pulling :-
+
+git pull upstream master 
+
+
+for changing upstream :-
+
+git remote set-url upstream https://github.com/pkprajapat/asnmt2
+
+for pushing :-
+
+git remote add upstream https://github.com/pkprajapat/asnmt2
+git add *
+git commit -m "Message"
+git pull upstream master && git push origin master 
+
+for setting proxy:-
+
+git config --global http.proxy git remote set-url upstreMhttp://10.10.78.22:3128
+
+for uploading a new folder :-
+cd folder name
+
+git init
+
+git add *
+
+git remote add origin "link of repo"
+without comma
+
+<-------------------------------------------------------------------->
+
+
+
+
+
+for pulling :-
+
+git pull upstream master 
+
+
+for changing upstream :-
+
+git remote set-url upstream https://github.com/pkprajapat/asnmt2
+
+for pushing :-
+
+git remote add upstream https://github.com/pkprajapat/asnmt2
+git add *
+git commit -m "Message"
+git pull upstream master && git push origin master 
+
+for setting proxy:-
+
+git config --global http.proxy http://10.10.78.22:3128
+
+for uploading a new folder :-
+cd folder name
+git init
+git add *
+
+
+for commiting delted file 
+git add --all && git commit -m "Your commit"
