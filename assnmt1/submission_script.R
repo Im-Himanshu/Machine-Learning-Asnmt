@@ -3,13 +3,13 @@
 #
 #"F:/7th semester/COL341 Rahul garg/input/input.txt"
 #test <- read.table("F:/7th semester/COL341 Rahul garg/input/input.txt",header = FALSE,sep = ",")
-file_name  = "F:/7th semester/COL341 Rahul garg/assignments/ass1/inputs/input.txt"
+#file_name  = "F:/7th semester/COL341 Rahul garg/assignments/ass1/inputs/input.txt"
 args <- commandArgs(trailingOnly = TRUE)
 file_name <- args[1]
 file_name  = "F:/7th semester/COL341 Rahul garg/assignments/ass1/inputs/inputsmall1.txt";
 test <- read.table(file_name,header = FALSE,sep = ",")
-mat <- as.matrix(test)
-#mat =  matrix(c(5, 4,6, 5, 7, 6,8,7,9,8), nrow=2, ncol=5)
+mat <- as.matrix(test);
+#mat =  matrix(c(3, 4,4, 5, 5, 6,6,7,7,8), nrow=2, ncol=5)
 dimns1 = dim(mat)
 y = mat[,dimns1[2]]  #for the ax=b equation
 
@@ -182,31 +182,51 @@ m = m[,-dimns[2]]; #removing the y
 final = m[rowSums(m^2)>thres,] #only those row which are positive and sum is greater than some positive number
 lol = dim(final);
 lol[1] = lol[1]+1;
+#means solution has space not unique solution have to check consistency here 
 if(lol[1]<lol[2]){
   null = final[,lol[1]:lol[2]]; #to ignore the null rows
+  
   max = dim(null);
+  p = -1*max[1]-1;
+  q = -1*length(y)-1;
   y = t(y)
+  y4 = y[,-1:-lol[1]] #to judge consistency
+  y = y[p:q];
+  y = t(y);
+  mediucre = c(1:(lol[2]-lol[1]+1)) 
+  mediucre [1:(lol[2]-lol[1]+1)]= 0
+  mediucre = t(mediucre)
+  y = cbind(y,mediucre)
+  consistent = sum(y4)<thres && sum(y4)>-1*thres
   demo2 = y;#for subtracting from the null matrix repeating y 
   for(lv in 2:max[2]){
     demo2 = rbind(demo2,y);
   }
-  p = -1*max[1]-1;
-  q = -1*dim(demo2)[2]-1;
-  demo2 = demo2[,p:q]
-  
+  #p = -1*max[1]-1;
+  #q = -1*dim(demo2)[2]-1;
+  #demo2 = demo2[,p:q]
+  demo3 = t(demo2) #converting to column space from row one 
   null = t(null)
   
-  solly = demo2-null; #for third part
+  #solly = demo2-null; #for third part
   null = -1*null;  #for second part
   
   crntdim = dim(null);
   temp = lol[2]-(lol[1]-1);#strength of the null space of a 
   tempmat = diag(temp);
+  
   #just adding the total format....
-  solly2 = cbind(solly,tempmat);
+  solly3 = 0;
+  
   null2 = cbind(null,tempmat)
   null2 = t(null2)
-  solly2 = t(solly2);
+  if(consistent){
+    #   solly2 = cbind(solly,tempmat);
+    solly3 = t(y)
+    solly3 = cbind (solly3, demo3+ null2);  
+    
+  }
+  #solly2 = t(solly2);
   final2 = t(final)
 }else{
   null = 0;
@@ -215,9 +235,9 @@ if(lol[1]<lol[2]){
   j = length(y2);
   tempry = y2[i:j];
   if(j>=i && sum(tempry)>0){
-    solly2 = 0; #means no solution more constrain than variable
+    solly3 = 0; #means no solution more constrain than variable
   } else{
-    solly2 = y2[1:lol[2]]
+    solly3 = y2[1:lol[2]]
     
   }
   
@@ -229,6 +249,6 @@ write.table(final4, file.path("out_1.txt"), sep = ",", row.names = FALSE,col.nam
 write.table(null2, file.path("out_2.txt"), sep = ",", row.names = FALSE,col.names = FALSE,
             qmethod = "double",append = FALSE);
 
-write.table(solly2, file.path("out_3.txt"), sep = ",", row.names = FALSE,col.names = FALSE,
+write.table(solly3, file.path("out_3.txt"), sep = ",", row.names = FALSE,col.names = FALSE,
             qmethod = "double",append = FALSE);
 

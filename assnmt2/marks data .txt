@@ -1,0 +1,17 @@
+<|--                                                                            
+running linear regression part...                                               
+running logistic regression part...                                             
+evaluating...                                                                   
+Your error(rms) in linear regression part is 4.401641. Maximum rms error allowed
+ is 4.7.                                                                        
+Your solution accuracy in logistic regression assignment is 48.878000. Minimum a
+ccuracy required is 55                                                          
+Marks for Linear regression:                                                    
+Correctness: 35                                                                 
+Performance: 1                                                                  
+subTotal: 36                                                                    
+Marks for Logistic regression:                                                  
+subTotal: 0                                                                     
+\nTotal Marks: 36                                                               
+                                                                                
+--|> 
