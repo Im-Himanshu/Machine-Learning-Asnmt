@@ -109,6 +109,8 @@ for word in querywords.splitlines() :
     j = lexicon.get(word.lower())  # get index of this doc   will give the doc number
     wordvector =  wordsvds[j]
     cosinevalue = [1 - spatial.distance.cosine(wordsvd, docvector) for wordsvd in wordsvds]  # find k smallest in this because it is distance itself
+    dict = {}
+
     ind = np.argpartition(cosinevalue, -1 * k)[-1 * k:]  # with highest k element because distance.cosine give angle rathen than value
     for i in ind :
         for keys,value in lexicon.items():

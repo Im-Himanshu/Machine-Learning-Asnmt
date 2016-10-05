@@ -4,6 +4,7 @@ import codecs
 import time
 import scipy.sparse as sp
 import  numpy as np
+import  warnings
 from scipy.sparse import coo_matrix
 from scipy.sparse.linalg import svds
 #
@@ -28,15 +29,63 @@ from scipy.sparse.linalg import svds
 # rows = 4
 # column = 4
 # z =2;
-dir = "himanshu"
-dir = dir.rstrip("\ ")
-dir = dir.lstrip('G')
-print(dir)
-row_ind = [0,0,1,1,2,2,3,3,1,0]
-ary = np.array[1,2,3]
-print(ary)
-ary.
-print(a)
+# dir = "himanshu"
+# dir = dir.rstrip("\ ")
+# dir = dir.lstrip('G')
+# print(dir)
+# row_ind = [0,0,1,1,2,2,3,3,1,0]
+# np.array([1])/0   #'print' mode
+# a = 5
+#
+#
+# with warnings.catch_warnings():
+#     warnings.filterwarnings('error')
+#     try:
+#         answer = 1 / 0
+#     except Warning as e:
+#         print('error found:', e)
+# with np.errstate(divide='raise'):
+#     try:
+#         a / 0   # this gets caught and handled as an exception
+#     except FloatingPointError:
+#         print('oh no!')
+#
+# try:
+#     np.array([1]) / 0
+# except Warning:
+#     print('Warning was raised as an exception!')
+row_ind = [0,0,1,1,2,2,3,3,1,0,8,3]
+row_ind2 = [0,1,2,3,11,11,4,5,10,6,7,8,9]
+row_ind.sort(reverse=True)
+print(row_ind)
+k = 5
+r2 = np.argpartition(row_ind2, -1 * k)
+r = np.argpartition(row_ind2, -1 * k)[:1 * k]
+r3 = np.argpartition(row_ind2, -1 * k)[-1 * k:]
+print(r2)
+print(r)
+print(r3)
+
+
+dict = {}
+i = math.floor(.2)
+i = .2
+dict.update({i:3})
+i = math.floor(.3)
+dict.update({i:5})
+i = math.floor(.1)
+dict.update({i:1})
+i = math.floor(.6)
+dict.update({i:6})
+
+for lol in dict :
+    print(lol)
+    print(dict.get(.2))
+
+# ary = np.array[1,2,3]
+# print(ary)
+# ary.
+# print(a)
 # col_ind = [0,1,2,3,0,1,1,0,2,0]
 #
 # lexicon = {}
