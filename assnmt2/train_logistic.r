@@ -47,7 +47,7 @@ for(p in 1:h){
 classes = max;
 feature = n
 #count occurnce 
-count = sum(til[,1])
+count = sum(til[1:3000,7])
 
 
 
@@ -55,9 +55,11 @@ theta = matrix(1:max*n,classes,feature)
 ##########################7 rows x   54 column
 theta[,] = 0;
 theta2 = theta;
+gradient = theta;
 example = 1;
 alpha = .0000001;
-for(example in 1:300000)
+
+for(example in 1:3000)
 {
   denom = 0
   num= 0;
@@ -72,14 +74,16 @@ for(example in 1:300000)
     prob = num/denom
     for(b in 1:feature){
       #b=b+1;
-      gradient = x[example,b]*(til[example,a]-prob)
-      theta2[a,b] = theta[a,b] + alpha*gradient;
+      gradient[a,b] = gradient[a,b] + x[example,b]*(til[example,a]-prob)
+      #theta2[a,b] = theta[a,b] + alpha*gradient;
     }
   }
   #theta3 = theta 
   theta = theta2;
   #example = example+1
 }
+#gradient[,] = gradient[,]*3
 
+theta = theta + alpha*gradient;
 write.table(theta, file.path(modeltheta), sep = ",", row.names = FALSE,col.names = FALSE,
             qmethod = "double",append = FALSE);
