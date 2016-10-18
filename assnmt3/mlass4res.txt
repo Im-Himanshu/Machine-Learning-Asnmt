@@ -1,0 +1,25 @@
+first problem 
+2 - 2 sec
+
+oh the problem was a extra inner loop 
+now it is 
+2 --> .138 second
+10 --> 12950 word
+20 --> 16sec 28301 word
+100- 457 second  149826words 
+
+now after removing the list thing which was increasing the size of the array too much 
+
+20 --> 1.62
+200 --> 43.  25013
+
+4997 146198 second = 43 minutes --- 2490.1987059116364 seconds ---
+
+
+
+
+
+200 --> 2.7sec 
+1000 --> 12.5sec
+5000 ---> 34sec  now after sparsing it is only 20 second for whole after 
+after svd for 5000 76 second 

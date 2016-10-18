@@ -1,0 +1,157 @@
+unzip:  cannot find or open Documents.zip, Documents.zip.zip or Documents.zip.ZI
+P.                                                                              
+<|--                                                                            
+==========Testing==========                                                     
+Traceback (most recent call last):                                              
+  File "lsi.py", line 6, in <module>                                            
+    import winsound                                                             
+ImportError: No module named winsound                                           
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 10, in <module>                               
+    with open(gold,'r') as f:                                                   
+IOError: [Errno 2] No such file or directory: 'doc_output_gold.txt'             
+Document similarity case marks (out of 30): 0                                   
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 10, in <module>                               
+    with open(gold,'r') as f:                                                   
+IOError: [Errno 2] No such file or directory: 'term_output_gold.txt'            
+Term similarity case marks (out of 30): 0                                       
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 10, in <module>                               
+    with open(gold,'r') as f:                                                   
+IOError: [Errno 2] No such file or directory: 'query_output_gold.txt'           
+Query-Document similarity case marks (out of 40): 0                             
+Total Marks out of 100: 0   
+
+
+unzip:  cannot find or open Documents.zip, Documents.zip.zip or Documents.zip.ZI
+P.                                                                              
+<|--                                                                            
+==========Testing==========                                                     
+Traceback (most recent call last):                                              
+  File "lsi.py", line 72, in <module>                                           
+    vocabulary = build_sparse()                                                 
+  File "lsi.py", line 55, in build_sparse                                       
+    imfile = codecs.open(inputdir+"/%s.txt"%(i), 'r', encoding='latin-1')       
+  File "/usr/lib/python2.7/codecs.py", line 881, in open                        
+    file = __builtin__.open(filename, mode, buffering)                          
+IOError: [Errno 2] No such file or directory: 'Documents/1.txt'                 
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 10, in <module>                               
+    with open(gold,'r') as f:                                                   
+IOError: [Errno 2] No such file or directory: 'doc_output_gold.txt'             
+Document similarity case marks (out of 30): 0                                   
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 10, in <module>                               
+    with open(gold,'r') as f:                                                   
+IOError: [Errno 2] No such file or directory: 'term_output_gold.txt'            
+Term similarity case marks (out of 30): 0                                       
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 10, in <module>   
+  
+  
+  
+  Traceback (most recent call last):                                              
+  File "lsi.py", line 121, in <module>                                          
+    imfile = codecs.open(query_in, 'r', encoding='latin-1')                     
+  File "/usr/lib/python2.7/codecs.py", line 896, in open                        
+    file = __builtin__.open(filename, mode, buffering)                          
+IOError: [Errno 2] No such file or directory: 'term_output.txt'                 
+Document similarity case marks (out of 30): 0                                   
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 22, in <module>                               
+    with open(sub,'r') as f:                                                    
+IOError: [Errno 2] No such file or directory: 'term_output.txt'                 
+Term similarity case marks (out of 30): 0                                       
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 22, in <module>                               
+    with open(sub,'r') as f:                                                    
+IOError: [Errno 2] No such file or directory: 'query_output.txt'                
+Query-Document similarity case marks (out of 40): 0                             
+Total Marks out of 100: 0  
+
+
+
+Traceback (most recent call last):                                              
+  File "lsi.py", line 128, in <module>                                          
+    imfile = codecs.open(query_in, 'r', encoding='latin-1')                     
+  File "/usr/lib/python2.7/codecs.py", line 896, in open                        
+    file = __builtin__.open(filename, mode, buffering)                          
+IOError: [Errno 2] No such file or directory: 'term_output.txt'                 
+Document similarity case marks (out of 30): 0                                   
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 22, in <module>                               
+    with open(sub,'r') as f:                                                    
+IOError: [Errno 2] No such file or directory: 'term_output.txt'                 
+Term similarity case marks (out of 30): 0                                       
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 22, in <module>                               
+    with open(sub,'r') as f:                                                    
+IOError: [Errno 2] No such file or directory: 'query_output.txt'                
+Query-Document similarity case marks (out of 40): 0                             
+Total Marks out of 100: 0                                                       
+      
+  
+  
+  
+  '-z', '200', '-k', '10', '--dir', 'Documents', '--doc_in', 'doc_in.txt', '--doc
+_out', 'doc_output.txt', '--term_in', 'term_in.txt', '--term_out', 'term_output.
+txt', '--query_in', 'query_in.txt', '--query_out', 'query_output.txt'
+  
+  
+  
+  ['-z', '200', '-k', '10', '--dir', 'Documents', '--doc_in', 'doc_in.txt', '--doc
+_out', 'doc_output.txt', '--term_in', 'term_in.txt', '--term_out', 'term_output.
+txt', '--query_in', 'query_in.txt', '--query_out', 'query_output.txt']          
+--- after making tfidf 6.19536185265 seconds ---                                
+--- after making sparse 7.45892500877 seconds ---                               
+--- after svd 18.1813800335 seconds ---                                         
+                                                                                
+--- after 1st query 24.2041459084 seconds ---                                   
+/usr/lib/python2.7/dist-packages/scipy/spatial/distance.py:329: RuntimeWarning: 
+invalid value encountered in double_scalars                                     
+  dist = 1.0 - np.dot(u, v) / (norm(u) * norm(v))                               
+--- after 2nd query 564.100584984 seconds ---                                   
+--- 569.513936996 seconds ---                                                   
+Document similarity case marks (out of 30): 0                                   
+Term similarity case marks (out of 30): 0                                       
+Query-Document similarity case marks (out of 40): 0                             
+Total Marks out of 100: 0     
+
+
+
+me                                                                              
+--- after making tfidf 7.52812099457 seconds ---                                
+--- after making sparse 8.83494997025 seconds ---                               
+--- after svd 19.8173530102 seconds ---                                         
+--- after 1st query 26.7293961048 seconds ---                                   
+Document similarity case marks (out of 30): 28.620000                           
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 22, in <module>                               
+    with open(sub,'r') as f:                                                    
+IOError: [Errno 2] No such file or directory: 'term_output.txt'                 
+Term similarity case marks (out of 30): 0                                       
+Traceback (most recent call last):                                              
+  File "eval_submission.py", line 22, in <module>                               
+    with open(sub,'r') as f:                                                    
+IOError: [Errno 2] No such file or directory: 'query_output.txt'                
+Query-Document similarity case marks (out of 40): 0                             
+Total Marks out of 100: 28.620000                                               
+ ==========Testing==========                                                     
+me                                                                              
+--- after making tfidf 7.54303097725 seconds ---                                
+--- after making sparse 8.85367584229 seconds ---                               
+--- after svd 19.3660478592 seconds ---                                         
+--- after 1st query 24.7076449394 seconds ---                                   
+--- after 2nd query 171.839694023 seconds ---                                   
+--- 177.628898859 seconds ---                                                   
+Document similarity case marks (out of 30): 28.620000                           
+Term similarity case marks (out of 30): 28.620000                               
+Query-Document similarity case marks (out of 40): 20.800000                     
+Total Marks out of 100: 78.040000                                               
+                                                                                
+--|>                                                  
+ 
+  
+  
+  
