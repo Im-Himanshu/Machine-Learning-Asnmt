@@ -1,0 +1,4 @@
+1. see what is laplace smothing 
+
+P(w|c)=count(w,c)+1   /  count(c)+|V|+1, see at 
+http://stats.stackexchange.com/questions/108797/in-naive-bayes-why-bother-with-laplacian-smoothing-when-we-have-unknown-words-i

@@ -67,8 +67,9 @@ def build_sparse():
             else:
                lexicon.update({word:lexicon.__len__()})
             col_index.append(column)
-            freq.append(1.0)
+            freq.append(1.0)   # if there are two element at same index then they will add up in sparsing
         i = i+1
+
 vocabulary = build_sparse()
 No_of_column = lexicon.__len__()
 print("--- after making tfidf %s seconds ---" % (time.time() - start_time))
@@ -89,7 +90,7 @@ querytitles = imfile.read()
 #print(querytitles)
 # print(titles.__len__())
 for title in querytitles.splitlines() :
-    j = titles.index(title.lower()) # get index of this doc   will give the doc number
+    j = titles.index(title.lower()) # get index of this doc will give the doc number
     docvector = docsvds[j]
     cosinevalue = [1-spatial.distance.cosine(docsvd, docvector) for docsvd in docsvds]  # find k smallest in this because it is distance itself
     ind = np.argpartition(cosinevalue, -1*k)[-1*k:]  # with highest k element because distance.cosine give angle rathen than value
