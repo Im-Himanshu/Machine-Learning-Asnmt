@@ -1,0 +1,1 @@
+Rscript --vanilla DigitRecognizer.R $1 $2
