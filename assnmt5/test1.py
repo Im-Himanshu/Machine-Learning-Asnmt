@@ -3,9 +3,9 @@ import numpy as np
 import pickle
 import math
 cmdinput = sys.argv[1:]
-# doc_in_test = cmdinput[1] #test file
-# doc_in  = cmdinput[2]; #model file
-# doc_out = cmdinput[3];  #result in this file
+# doc_in_test = cmdinput[0] #test file
+# doc_in  = cmdinput[1]; #model file
+# doc_out = cmdinput[2];  #result in this file
 
 doc_in_test = "Public test data/test_att.txt"
 doc_in  = "docout.txt"

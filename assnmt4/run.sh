@@ -1,1 +1,1 @@
-Rscript --vanilla DigitRecognizer.R $1 $2
+Python CNNDigitRecognizer.py $1 $2

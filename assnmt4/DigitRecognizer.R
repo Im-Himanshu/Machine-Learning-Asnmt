@@ -10,10 +10,10 @@ set.seed(0)
 # read the file form the input folder
 
 args <- commandArgs(trailingOnly = TRUE)
-trainingfile = args[1]
-testingfile = args[2]
-#trainingfile  = "input/train.csv"
-#testingfile = "input/test.csv";
+#trainingfile = args[1]
+#testingfile = args[2]
+trainingfile  = "input/train.csv"
+testingfile = "input/test.csv";
 inputtrain = read_csv(trainingfile)
 inputtest  = read_csv(testingfile)
 

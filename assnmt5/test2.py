@@ -31,10 +31,7 @@ for line in imfile:  # this will take the line by line
     count+=1;
     words = line.split(" ");
     j = titles.__len__();
-    #totals = titleprob;
     totals = np.log10(titleprob);  # remove 100 from the training for this
-    #    totals = np.array([1 for i in range(1,j)]); # have one for all
-    #localdict = {};
     for word in words:  # Start index from 1 because 0th is the title which won't be there in testing
         # this is not equal to null
         i2 = Vocablulary.get(word)  # will return the index of the word that will be the key
